@@ -37,7 +37,7 @@ public class Controller {
 	}
 	
 	@GetMapping("/book/{id}")
-	public ResponseEntity<Book> getBookById (@PathVariable("id") int id) {
+	public ResponseEntity<Book> getBookById(@PathVariable("id") int id) {
 		Book bookById = this.service.getBookById(id);
 		if(bookById!= null) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
